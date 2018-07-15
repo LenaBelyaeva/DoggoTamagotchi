@@ -40,8 +40,15 @@ private:
     QVBoxLayout * mainLayout;
     QLabel * stats;
 
+    void hideMenu(int);
+    bool isShowing[4] = {0};
+    enum menu {stat, feed, pet, nurse};
+
 public slots:
     void showStats();
+    void showFeedMenu();
+    void showPetMenu();
+    void showNurseMenu();
 
 protected:
     void paintEvent(QPaintEvent *pe);

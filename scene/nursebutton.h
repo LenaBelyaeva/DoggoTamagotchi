@@ -10,13 +10,18 @@ class nurseButton : public QPushButton
     Q_OBJECT
 public:
     explicit nurseButton(Pet * ThePet, QWidget *parent = nullptr);
+    QVBoxLayout * nurseLayout;
+    void hideLayout();
+    void showLayout();
 
 signals:
 
 public slots:
 
 private:
-    QMenu * nurseMenu;
+    QPushButton * pillButton;
+    QPushButton * injectionButton;
+
 };
 
 #endif // NURSEBUTTON_H

@@ -5,8 +5,5 @@ cleanButton::cleanButton(Pet * ThePet, QWidget *parent) : QPushButton(parent)
 {
     setIcon(QIcon("://img/Dustpan.png"));
     setIconSize(QSize(32,32));
-    cleanMenu = new QMenu;
-    cleanMenu->setWindowFlags(cleanMenu->windowFlags() | Qt::NoDropShadowWindowHint);
-    setMenu(cleanMenu);
-    cleanMenu->addAction("clean", ThePet, SLOT(clean()));
+    connect(this, SIGNAL(clicked()), ThePet, SLOT(clean()));
 }

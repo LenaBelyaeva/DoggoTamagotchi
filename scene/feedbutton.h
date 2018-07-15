@@ -11,13 +11,18 @@ class feedButton : public QPushButton
     Q_OBJECT
 public:
     explicit feedButton(Pet * ThePet, QWidget *parent = nullptr);
+    QVBoxLayout * feedLayout;
+    void hideLayout();
+    void showLayout();
 
 signals:
 
 public slots:
 
 private:
-    QMenu *feedMenu;
+    QPushButton * tacoButton;
+    QPushButton * pieButton;
+    QPushButton * juiceButton;
 };
 
 #endif // FEEDBUTTON_H

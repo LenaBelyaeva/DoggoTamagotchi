@@ -9,13 +9,19 @@ class petButton : public QPushButton
     Q_OBJECT
 public:
     explicit petButton(Pet * ThePet, QWidget *parent = nullptr);
+    QVBoxLayout * petLayout;
+    void hideLayout();
+    void showLayout();
+
 
 signals:
 
 public slots:
 
 private:
-    QMenu * petMenu;
+    QPushButton * brushButton;
+    QPushButton * hugButton;
+    QPushButton * ballButton;
 };
 
 #endif // PETBUTTON_H

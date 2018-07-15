@@ -24,6 +24,10 @@ Widget::Widget(QWidget *parent)
     pb = new petButton(ThePet);
     cb = new cleanButton(ThePet);
     connect(sb, SIGNAL(clicked()), this, SLOT(showStats()));
+    connect(fb, SIGNAL(clicked()), this, SLOT(showFeedMenu()));
+    connect(pb, SIGNAL(clicked()), this, SLOT(showPetMenu()));
+    connect(nb, SIGNAL(clicked()), this, SLOT(showNurseMenu()));
+
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     buttonLayout->setAlignment(Qt::AlignTop);
     buttonLayout->addWidget(sb);
@@ -65,11 +69,21 @@ Widget::Widget(QWidget *parent)
 }
 
 void Widget::showStats()
-{
-    static int show = -1;
-    show *= (-1);
-    if (show == 1)
+{  
+    bool show = isShowing[stat];
+    for (int i = 0; i < 4; i++){
+        hideMenu(i);
+        isShowing[i] = false;
+    }
+    if (show)
     {
+        isShowing[stat] = false;
+        stats ->hide();
+        mainLayout -> removeWidget(stats);
+    }
+    else
+    {
+        isShowing[stat] = true;
         QString str("Age: ");
         str.append(QString::number(ThePet->getAge()));
         str.append("\n");
@@ -87,14 +101,97 @@ void Widget::showStats()
         stats->setText(str);
         mainLayout -> insertWidget(mainLayout->count()-1, stats);
         stats->show();
-    }
-    else
-    {
-        stats ->hide();
-        mainLayout -> removeWidget(stats);
+        return;
     }
 }
 
+void Widget::showFeedMenu()
+{
+    bool show = isShowing[feed];
+    for (int i = 0; i < 4; i++){
+        hideMenu(i);
+        isShowing[i] = false;
+    }
+    if (!show)
+    {
+        isShowing[feed] = true;
+        mainLayout -> insertLayout(mainLayout->count()-1, fb->feedLayout);
+        fb->showLayout();
+    }
+    else
+    {
+        isShowing[feed] = false;
+        fb->hideLayout();
+        mainLayout -> removeItem(fb->feedLayout);
+    }
+}
+
+void Widget::showPetMenu()
+{
+    bool show = isShowing[pet];
+    for (int i = 0; i < 4; i++){
+        hideMenu(i);
+        isShowing[i] = false;
+    }
+    if (!show)
+    {
+        isShowing[pet] = true;
+        mainLayout -> insertLayout(mainLayout->count()-1, pb->petLayout);
+        pb->showLayout();
+    }
+    else
+    {
+        isShowing[pet] = false;
+        pb->hideLayout();
+        mainLayout -> removeItem(pb->petLayout);
+    }
+}
+
+void Widget::showNurseMenu()
+{
+    bool show = isShowing[nurse];
+    for (int i = 0; i < 4; i++){
+        hideMenu(i);
+        isShowing[i] = false;
+    }
+    if (!show)
+    {
+        isShowing[nurse] = true;
+        mainLayout -> insertLayout(mainLayout->count()-1, nb->nurseLayout);
+        nb->showLayout();
+    }
+    else
+    {
+        isShowing[nurse] = false;
+        nb->hideLayout();
+        mainLayout -> removeItem(nb->nurseLayout);
+    }
+}
+
+void Widget::hideMenu(int i)
+{
+    switch (i){
+        case stat:
+        stats ->hide();
+        mainLayout -> removeWidget(stats);
+        break;
+
+        case feed:
+        fb->hideLayout();
+        mainLayout -> removeItem(fb->feedLayout);
+        break;
+
+        case pet:
+        pb->hideLayout();
+        mainLayout -> removeItem(pb->petLayout);
+        break;
+
+        case nurse:
+        nb->hideLayout();
+        mainLayout -> removeItem(nb->nurseLayout);
+        break;
+    }
+}
 
 void Widget::paintEvent(QPaintEvent * pe)
 {
