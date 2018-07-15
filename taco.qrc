@@ -1,19 +1,17 @@
 <RCC>
-    <qresource prefix="/img/icons">
-        <file>background.png</file>
-        <file>Body-Brush.png</file>
-        <file>Clipboard.png</file>
-        <file>Dustpan.png</file>
-        <file>FirstAidKit.png</file>
-        <file>Tacos.png</file>
-        <file>walk-left-1.png</file>
-        <file>walk-left-2.png</file>
-        <file>walk-left-3.png</file>
-        <file>walk-right-1.png</file>
-        <file>walk-right-2.png</file>
-        <file>walk-right-3.png</file>
-    </qresource>
-    <qresource prefix="/fonts">
-        <file>ARCADECLASSIC.TTF</file>
+    <qresource prefix="/">
+        <file>fonts/ARCADECLASSIC.TTF</file>
+        <file>img/background.png</file>
+        <file>img/Body-Brush.png</file>
+        <file>img/Clipboard.png</file>
+        <file>img/Dustpan.png</file>
+        <file>img/FirstAidKit.png</file>
+        <file>img/Tacos.png</file>
+        <file>img/walk-left-1.png</file>
+        <file>img/walk-left-2.png</file>
+        <file>img/walk-left-3.png</file>
+        <file>img/walk-right-1.png</file>
+        <file>img/walk-right-2.png</file>
+        <file>img/walk-right-3.png</file>
     </qresource>
 </RCC>

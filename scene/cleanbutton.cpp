@@ -3,7 +3,7 @@
 #include <QtWidgets>
 cleanButton::cleanButton(Pet * ThePet, QWidget *parent) : QPushButton(parent)
 {
-    setIcon(QIcon(":/img/icons/Dustpan.png"));
+    setIcon(QIcon("://img/Dustpan.png"));
     setIconSize(QSize(32,32));
     cleanMenu = new QMenu;
     cleanMenu->setWindowFlags(cleanMenu->windowFlags() | Qt::NoDropShadowWindowHint);

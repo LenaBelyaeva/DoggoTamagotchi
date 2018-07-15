@@ -5,7 +5,7 @@
 
 statsButton::statsButton(Pet * ThePet, QWidget *parent) : QPushButton(parent)
 {
-    setIcon(QIcon(":/img/icons/Clipboard.png"));
+    setIcon(QIcon("://img/Clipboard.png"));
     setIconSize(QSize(32,32));
     //statsBox = new QMessageBox;
     //QPushButton * OkButton = statsBox->addButton(QMessageBox::Ok);

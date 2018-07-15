@@ -34,7 +34,7 @@ Widget::Widget(QWidget *parent)
     mainLayout->addLayout(buttonLayout);
     mainLayout->addStretch();
 
-    int id = QFontDatabase::addApplicationFont(":/fonts/ARCADECLASSIC.TTF");
+    int id = QFontDatabase::addApplicationFont("://fonts/ARCADECLASSIC.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont arcade(family, 12);
 
@@ -42,12 +42,12 @@ Widget::Widget(QWidget *parent)
     stats->setFont(arcade);
     stats->setAlignment(Qt::AlignCenter);
 
-    QImage wl1(":/img/icons/walk-left-1.png");
-    QImage wl2(":/img/icons/walk-left-2.png");
-    QImage wl3(":/img/icons/walk-left-3.png");
-    QImage wr1(":/img/icons/walk-right-1.png");
-    QImage wr2(":/img/icons/walk-right-2.png");
-    QImage wr3(":/img/icons/walk-right-3.png");
+    QImage wl1("://img/walk-left-1.png");
+    QImage wl2("://img/walk-left-2.png");
+    QImage wl3("://img/walk-left-3.png");
+    QImage wr1("://img/walk-right-1.png");
+    QImage wr2("://img/walk-right-2.png");
+    QImage wr3("://img/walk-right-3.png");
     arr[0] = wl1;
     arr[1] = wl2;
     arr[2] = wl3;
@@ -58,6 +58,7 @@ Widget::Widget(QWidget *parent)
     minX = -wl1.width();
     x = (maxX+minX)/2;
     moving = left;
+    petState = 0;
 
     startTimer(200);
     startTimer(60000);

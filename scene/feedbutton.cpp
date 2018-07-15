@@ -4,8 +4,7 @@
 
 feedButton::feedButton(Pet * ThePet, QWidget *parent) : QPushButton(parent)
 {
-
-    setIcon(QIcon(":/img/icons/Tacos.png"));
+    setIcon(QIcon("://img/Tacos.png"));
     setIconSize(QSize(32,32));
     feedMenu = new QMenu;
     setMenu(feedMenu);

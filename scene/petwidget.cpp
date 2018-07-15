@@ -10,5 +10,5 @@ petWidget::petWidget(QWidget *parent) : QWidget(parent)
 void petWidget::paintEvent(QPaintEvent *pe)
 {
     QPainter p(this);
-    p.drawImage(QPoint(140,300), QImage(":/img/icons/walk-left-1.png"));
+    p.drawImage(QPoint(140,300), QImage("://img/walk-left-1.png"));
 }

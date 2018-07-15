@@ -5,7 +5,7 @@
 
 petButton::petButton(Pet * ThePet, QWidget *parent) : QPushButton(parent)
 {    
-    setIcon(QIcon(":/img/icons/Body-Brush.png"));
+    setIcon(QIcon("://img/Body-Brush.png"));
     setIconSize(QSize(32,32));
     petMenu = new QMenu;
     petMenu->setWindowFlags(petMenu->windowFlags() | Qt::NoDropShadowWindowHint);

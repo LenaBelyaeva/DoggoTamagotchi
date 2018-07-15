@@ -30,7 +30,6 @@ SOURCES += \
     scene/nursebutton.cpp \
     scene/pet.cpp \
     scene/petbutton.cpp \
-    scene/petwidget.cpp \
     scene/statsbutton.cpp \
     scene/widget.cpp
 
@@ -40,7 +39,6 @@ HEADERS += \
     scene/nursebutton.h \
     scene/pet.h \
     scene/petbutton.h \
-    scene/petwidget.h \
     scene/statsbutton.h \
     scene/widget.h
 

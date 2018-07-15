@@ -5,7 +5,7 @@
 
 nurseButton::nurseButton(Pet * ThePet, QWidget *parent) : QPushButton(parent)
 {
-    setIcon(QIcon(":/img/icons/FirstAidKit.png"));
+    setIcon(QIcon("://img/FirstAidKit.png"));
     setIconSize(QSize(32,32));
     nurseMenu = new QMenu;
     setMenu(nurseMenu);
