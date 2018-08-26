@@ -3,9 +3,13 @@
 #include <QtWidgets>
 #include <scene/mainScene.h>
 
-feedButton::feedButton(QWidget *parent) : menuButton(parent)
+feedButton::feedButton(QWidget *parent) : menuButton(parent),
+                                          icon("://img/Tacos.png"),
+                                          iconHover(":/img/Tacos-hover.png"),
+                                          iconPressed(":/img/Tacos-pressed.png")
 {
-    setIcon(QIcon("://img/Tacos.png"));
+    setIconSize(QSize(32,32));
+    setIcon(icon);
 
     tacoButton = new QPushButton("give taco");
     tacoButton->setFont(QFont(MainScene::mainFontFamily, 11));
@@ -43,9 +47,13 @@ void feedButton::showLayout()
 }
 
 
-nurseButton::nurseButton(QWidget *parent) : menuButton(parent)
+nurseButton::nurseButton(QWidget *parent) : menuButton(parent),
+    icon(":/img/FirstAidKit.png"),
+    iconHover(":/img/FirstAidKit-hover.png"),
+    iconPressed(":/img/FirstAidKit-pressed.png")
 {
-    setIcon(QIcon("://img/FirstAidKit.png"));
+    setIconSize(QSize(34,34));
+    setIcon(icon);
 
     pillButton = new QPushButton("give pill");
     pillButton->setFont(QFont(MainScene::mainFontFamily, 11));
@@ -77,9 +85,13 @@ void nurseButton::showLayout()
 }
 
 
-petButton::petButton(QWidget *parent) : menuButton(parent)
+petButton::petButton(QWidget *parent) : menuButton(parent),
+    icon(":/img/Brush.png"),
+    iconHover(":/img/Brush-hover.png"),
+    iconPressed(":/img/Brush-pressed.png")
 {
-    setIcon(QIcon("://img/Body-Brush.png"));
+    setIconSize(QSize(34,34));
+    setIcon(icon);
 
     brushButton = new QPushButton("brush");
     brushButton->setFont(QFont(MainScene::mainFontFamily, 11));
@@ -116,9 +128,13 @@ void petButton::showLayout()
     ballButton->show();
 }
 
-statsButton::statsButton(QWidget *parent) : menuButton(parent)
+statsButton::statsButton(QWidget *parent) : menuButton(parent),
+    icon(":/img/Clipboard.png"),
+    iconHover(":/img/Clipboard-hover.png"),
+    iconPressed(":/img/Clipboard-pressed.png")
 {
-    setIcon(QIcon("://img/Clipboard.png"));
+    setIconSize(QSize(34,34));
+    setIcon(icon);
 
     stats = new QLabel;
     stats->setFont(QFont(MainScene::mainFontFamily,  12));
@@ -154,8 +170,12 @@ void statsButton::showLayout()
     stats->show();
 }
 
-cleanButton::cleanButton(QWidget *parent) : menuButton(parent)
+cleanButton::cleanButton(QWidget *parent) : menuButton(parent),
+    icon(":/img/Dustpan.png"),
+    iconHover(":/img/Dustpan-hover.png"),
+    iconPressed(":/img/Dustpan-pressed.png")
 {
+    setIconSize(QSize(32,32));
     setIcon(QIcon("://img/Dustpan.png"));
     connect(this, SIGNAL(clicked()), &ThePet, SLOT(clean()));
 }

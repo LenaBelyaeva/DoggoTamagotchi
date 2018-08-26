@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     MainScene w;
     w.setObjectName("main");
     qApp->setStyleSheet("#main{background-image: url(://img/background.png)} "
-                        "QPushButton { border: none; color: white } "
+                        "QPushButton { border: none; color: white; } "
                         "QPushButton:hover:pressed { border: none; color: white; font-size: 14px; }  "
                         "QPushButton:hover { border: none; color: white; font-size: 17px; } "
                         "QLabel { color : white; }");

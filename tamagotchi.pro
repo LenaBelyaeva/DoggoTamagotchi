@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
     scene/pet.cpp \
     scene/mainScene.cpp \
-    scene/menuButtons.cpp
+    scene/menuButtons.cpp \
+    scene/buttonEventWatcher.cpp
 
 HEADERS += \
     scene/pet.h \
     scene/mainScene.h \
-    scene/menuButtons.h
+    scene/menuButtons.h \
+    scene/buttonEventWatcher.h
 
 DISTFILES +=
 

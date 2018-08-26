@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>fonts/ARCADECLASSIC.TTF</file>
         <file>img/background.png</file>
-        <file>img/Body-Brush.png</file>
         <file>img/Clipboard.png</file>
         <file>img/Dustpan.png</file>
         <file>img/FirstAidKit.png</file>
@@ -13,5 +12,16 @@
         <file>img/walk-right-1.png</file>
         <file>img/walk-right-2.png</file>
         <file>img/walk-right-3.png</file>
+        <file>img/Tacos-hover.png</file>
+        <file>img/Tacos-pressed.png</file>
+        <file>img/Brush.png</file>
+        <file>img/Brush-hover.png</file>
+        <file>img/Brush-pressed.png</file>
+        <file>img/Clipboard-hover.png</file>
+        <file>img/Clipboard-pressed.png</file>
+        <file>img/Dustpan-hover.png</file>
+        <file>img/Dustpan-pressed.png</file>
+        <file>img/FirstAidKit-hover.png</file>
+        <file>img/FirstAidKit-pressed.png</file>
     </qresource>
 </RCC>
