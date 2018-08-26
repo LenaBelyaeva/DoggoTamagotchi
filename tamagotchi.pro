@@ -25,22 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    scene/cleanbutton.cpp \
-    scene/feedbutton.cpp \
-    scene/nursebutton.cpp \
     scene/pet.cpp \
-    scene/petbutton.cpp \
-    scene/statsbutton.cpp \
-    scene/widget.cpp
+    scene/mainScene.cpp \
+    scene/menuButtons.cpp
 
 HEADERS += \
-    scene/cleanbutton.h \
-    scene/feedbutton.h \
-    scene/nursebutton.h \
     scene/pet.h \
-    scene/petbutton.h \
-    scene/statsbutton.h \
-    scene/widget.h
+    scene/mainScene.h \
+    scene/menuButtons.h
 
 DISTFILES +=
 

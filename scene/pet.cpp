@@ -17,11 +17,6 @@ Pet::Pet()
     speedHungry = -10;
 }
 
-Pet::~Pet()
-{
-
-}
-
 void Pet::giveTaco()
 {
     hungry += 20;

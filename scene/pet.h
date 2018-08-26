@@ -18,9 +18,8 @@ public slots:
     void givePill();
     void giveInjection();
     void clean();
+
 public:
-    Pet();
-    ~Pet();
     void Update();
     int getHungry() const;
     int getHealth() const;
@@ -28,7 +27,14 @@ public:
     int getPoops() const;
     int getHappiness() const;
     int isDied() const;
+
+    static Pet& getInstance(){
+        static Pet instance;
+        return instance;
+    }
+
 private:
+    Pet();
     bool died;
     int age;
     int speedAge;
@@ -40,6 +46,9 @@ private:
     int speedPoops;
     int happiness;
     int speedHappiness;
+
+    Pet(Pet const &);
+    void operator=(Pet const &);
 };
 
 #endif // PET_H
