@@ -4,10 +4,8 @@
 #include <QtGui>
 #include <QtWidgets>
 #include <scene/pet.h>
-#include <scene/menuButtons.h>
-
-#define left -1
-#define right 1
+#include <scene/mainSceneMenu.h>
+#include <scene/graphicsManager.h>
 
 class MainScene : public QWidget
 {
@@ -17,32 +15,16 @@ public:
     ~MainScene() = default;
 
     static QString mainFontFamily;
+    static const int WIDTH = 278;
+    static const int HEIGHT = 367;
 
 private:
     const int MILISEC_PER_FRAME = 200;
     const int MILISEC_PER_UPDATE = 60000;
 
     Pet & ThePet = Pet::getInstance();
-
-    QImage petSprites[6];
-    int x;
-    int movingDirection;
-    int maxX;
-    int minX;
-    int petState;
-    void spriteUpdate();
-
-    QVBoxLayout * mainLayout;
-
-    menuButton * menuButtons[5];
-
-    enum Menu {stat, feed, pet, nurse, none};
-    Menu currentMenu = none;
-    void showButtonLayout(menuButton * mb);
-    void hideButtonLayout(menuButton * mb);
-
-public slots:
-    void showMenu();
+    GraphicsManager manager;
+    MainSceneMenu * mainMenu;
 
 protected:
     void paintEvent(QPaintEvent *pe);

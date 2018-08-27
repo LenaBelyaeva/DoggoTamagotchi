@@ -20,6 +20,7 @@ public slots:
     void clean();
 
 public:
+    static const int MAX_POOPS_COUNT = 15;
     void Update();
     int getHungry() const;
     int getHealth() const;

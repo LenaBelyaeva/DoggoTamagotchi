@@ -23,5 +23,8 @@
         <file>img/Dustpan-pressed.png</file>
         <file>img/FirstAidKit-hover.png</file>
         <file>img/FirstAidKit-pressed.png</file>
+        <file>img/poop-1.png</file>
+        <file>img/poop-2.png</file>
+        <file>img/poop-3.png</file>
     </qresource>
 </RCC>

@@ -8,7 +8,7 @@ Pet::Pet()
     age = 0;
     health = 100;
     happiness = 100;
-    poops = 0;
+    poops = MAX_POOPS_COUNT;
     hungry = 100;
     speedAge = 1;
     speedHealth = 0;
@@ -145,7 +145,7 @@ void Pet::Update()
         speedHealth = 0;
         speedHappiness = -10;
     }
-    if (poops < 5)
+    if (poops < MAX_POOPS_COUNT)
         poops += speedPoops;
     if (health > (-1)*speedHealth)
         health += speedHealth;
